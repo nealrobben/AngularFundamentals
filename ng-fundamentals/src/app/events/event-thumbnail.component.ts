@@ -14,15 +14,8 @@ import { EventEmitter } from '@angular/core';
             <span>&nbsp;</span>
             <span>{{event.location.city}}, {{event.location.country}}</span>
         </div>
-        <div class="btn btn-primary" (click)="handleClickMe()">Click me!</div>
     </div>`
 })
 export class EventThumbnailComponent{
     @Input() event:any;
-    @Output() eventClick = new EventEmitter();
-
-    handleClickMe():void{
-        console.log('clicked!');
-        this.eventClick.emit('foo');
-    }
 }
